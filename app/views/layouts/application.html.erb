@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
 <title>Bayou Bikes Online Store</title>
  <%= stylesheet_link_tag "application", media: "all",
  "data-turbolinks-track" => true %>
@@ -9,18 +19,21 @@
  </head>
 
 <body class="<%= controller.controller_name %>">
-<div id="banner">
- <%= image_tag("logo.jpg") %>
-<%= @page_title || "Bayou Bikes" %>
-</div>
-<div id="columns">
-<div id="side">
-<ul>
-<li><a href="">Home</a></li>
-<li><a href="">Store</a></li>
-<li><a href="">Events</a></li>
-<li><a href="">About</a></li>
-</ul>
+  
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Logo">
+    
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Home</a></li>
+          <li><a href="">Store</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </div>
+</nav>
 </div>
 <div id="main">
 <%= yield %>
